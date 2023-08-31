@@ -5,7 +5,8 @@
 :root {
     --primary-clr: rgb(16, 16, 16);
     --secondary-clr: rgb(218, 218, 218);
-    --button-clr: rgb(139, 16, 16);
+    --link-clr: rgb(139, 16, 16);
+    --button-clr:rgb(13,110,253);
   }
   
 * {
@@ -16,4 +17,9 @@
 body{
     background-color: var(--primary-clr);
     font-family: 'Open Sans', sans-serif;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
 }
