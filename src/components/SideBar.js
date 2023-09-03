@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./sideBar.css";
 import React from "react";
 
@@ -49,13 +49,31 @@ const SideBar = () => {
 
       <hr></hr>
 
-      <div className="d-flex align-items-center">
+      <div className="d-flex align-items-center aboutYou">
         <img
           alt="Businnesman"
           src={process.env.PUBLIC_URL + "/images/businessman.png"}
           style={{ width: 40 + "px", borderRadius: 5 + "px" }}
           className="me-2"
         ></img>
+
+        <div className="dropup-center dropup">
+          <button
+            className="btn btn-secondary dropdown-toggle"
+            type="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Settings
+          </button>
+          <ul className="dropdown-menu dropdownMenuList">
+            <li>
+              <Link className="dropdown-item" to="/settings">
+                Update profile information
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   );

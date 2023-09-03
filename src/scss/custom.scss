@@ -15,11 +15,11 @@
 }
 
 body{
-    background-color: var(--primary-clr);
-    font-family: 'Open Sans', sans-serif;
+    background-color: var(--primary-clr) !important;
+    font-family: 'Open Sans', sans-serif !important;
 }
 
-a{
+a, a:hover{
     color: #fff;
     text-decoration: none;
 }
