@@ -11,7 +11,6 @@ const App = () => {
     <BrowserRouter>
       <div className="d-flex">
         <SideBar />
-
         <div className="routerContent">
           <Routes>
             <Route path="/" element={<Home />}></Route>

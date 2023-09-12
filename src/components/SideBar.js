@@ -59,17 +59,49 @@ const SideBar = () => {
 
         <div className="dropup-center dropup">
           <button
-            className="btn btn-secondary dropdown-toggle"
+            className="btn btn-secondary dropdown-toggle settingsButton"
             type="button"
             data-bs-toggle="dropdown"
             aria-expanded="false"
+            // onClick={(e) => {
+            //   e.target.style.backgroundColor = "transparent";
+            // }}
+            style={{ backgroundColor: "#212529" }}
           >
             Settings
           </button>
           <ul className="dropdown-menu dropdownMenuList">
             <li>
-              <Link className="dropdown-item" to="/settings">
-                Update profile information
+              <Link className="dropdown-item" to="/update">
+                Update profile
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item" to="/selected">
+                Selected cars
+              </Link>
+            </li>
+            <li>
+              <Link className="dropdown-item" to="/date-update">
+                Date of update
+              </Link>
+            </li>
+            <li>
+              <div>
+                <Link className="dropdown-item d-flex" to="/notifications">
+                  Notifications
+                  <span
+                    className="badge bg-primary d-flex align-items-center justify-content-center
+                 me-3 badgeElement"
+                  >
+                    3
+                  </span>
+                </Link>
+              </div>
+            </li>
+            <li>
+              <Link className="dropdown-item" to="/signOut">
+                Sign Out
               </Link>
             </li>
           </ul>
