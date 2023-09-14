@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./sideBar.css";
 import React from "react";
 
@@ -54,7 +54,7 @@ const SideBar = () => {
           alt="Businnesman"
           src={process.env.PUBLIC_URL + "/images/businessman.png"}
           style={{ width: 40 + "px", borderRadius: 5 + "px" }}
-          className="me-2"
+          className="me-3"
         ></img>
 
         <div className="dropup-center dropup">
@@ -72,37 +72,40 @@ const SideBar = () => {
           </button>
           <ul className="dropdown-menu dropdownMenuList">
             <li>
-              <Link className="dropdown-item" to="/update">
+              <NavLink className="dropdown-item" to="/update">
                 Update profile
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link className="dropdown-item" to="/selected">
+              <NavLink className="dropdown-item" to="/selected">
                 Selected cars
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link className="dropdown-item" to="/date-update">
+              <NavLink className="dropdown-item" to="/date-update">
                 Date of update
-              </Link>
+              </NavLink>
             </li>
             <li>
               <div>
-                <Link className="dropdown-item d-flex" to="/notifications">
+                <NavLink
+                  className="dropdown-item d-flex justify-content-between"
+                  to="/notifications"
+                >
                   Notifications
                   <span
                     className="badge bg-primary d-flex align-items-center justify-content-center
-                 me-3 badgeElement"
+             badgeElement"
                   >
                     3
                   </span>
-                </Link>
+                </NavLink>
               </div>
             </li>
             <li>
-              <Link className="dropdown-item" to="/signOut">
+              <NavLink className="dropdown-item" to="/signOut">
                 Sign Out
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
