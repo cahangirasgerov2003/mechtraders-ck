@@ -5,15 +5,17 @@ import Home from "./Home";
 import NotFound from "./NotFound";
 import SideBar from "./SideBar";
 import Settings from "./Settings";
+import Login from "./Login";
 
 const App = () => {
   return (
     <BrowserRouter>
       <div className="d-flex">
         <SideBar />
-        <div className="routerContent">
+        <div className="routerContent w-100">
           <Routes>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/" element={<Login />}></Route>
+            <Route path="/home" element={<Home />}></Route>
             <Route path="/settings" element={<Settings />}></Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
